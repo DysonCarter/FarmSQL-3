@@ -65,8 +65,20 @@
   position: fixed;
   background-color: rgb(60, 186, 51);
   width: 575px;
-  height: 99vh;
+  height: 774px;
   top: 0;
   margin-left: 513px;
   border: 4px solid #6a4d38;
+}
+
+.animalData {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.250);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  margin-left: 50px;
+  margin-bottom: 25px;
+  z-index: 1000000;
 }
