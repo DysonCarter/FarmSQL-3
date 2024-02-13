@@ -11,13 +11,20 @@ app.use(cors());
 app.use(express.json());
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'FARM'
 });
 
-connection.connect();
+connection.connect((err) => {
+  if (err) {
+    console.error('Error connecting to MySQL database:', err);
+    process.exit(1);
+  }
+  console.log('Connected to MySQL database');
+});
+
 
 // API endpoint to execute SQL queries
 app.post('/executeSqlQuery', (req, res) => {
