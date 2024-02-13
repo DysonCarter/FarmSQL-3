@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div>
       <SqlTextBox />
+      <div className='EmptyPen' />
       <Farmer />
     </div>
   );
