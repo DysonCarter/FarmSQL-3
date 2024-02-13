@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Animal = ({ id, name, species, color }) => {
+const Animal = ({ id, name, animal, color }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -27,7 +27,7 @@ const Animal = ({ id, name, species, color }) => {
                 <div>
                     <p>ID: {id}</p>
                     <p>Name: {name}</p>
-                    <p>Species: {species}</p>
+                    <p>Species: {animal}</p>
                     <p>Color: {color}</p>
                 </div>
             )}

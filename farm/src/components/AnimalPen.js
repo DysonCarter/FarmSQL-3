@@ -12,7 +12,7 @@ const AnimalPen = ({ animals }) => {
                     key={animal.id}
                     id={animal.id}
                     name={animal.name}
-                    species={animal.species}
+                    animal={animal.animal}
                     color={animal.color}
                 />
             ))}
