@@ -72,7 +72,7 @@ const Animal = ({ id, name, animal, color, size }) => {
         transition: "left 10s, top 10s", 
     };
 
-    if(color == 'rgba(0, 0, 0, 0.500)'){
+    if(color === 'rgba(0, 0, 0, 0.500)'){
         color = '???';
     }
 
