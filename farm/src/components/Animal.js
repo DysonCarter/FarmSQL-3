@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const Animal = ({ id, name, animal, color, size }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [position, setPosition] = useState({
-        x: Math.random() * 525, 
-        y: Math.random() * 724, 
+        x: Math.random() * 515, 
+        y: Math.random() * 720, 
     });
 
     if(id == null){
@@ -37,8 +37,8 @@ const Animal = ({ id, name, animal, color, size }) => {
     
     useEffect(() => {
         const moveInterval = setInterval(() => {
-            const newX = Math.random() * 525; 
-            const newY = Math.random() * 724; 
+            const newX = Math.random() * 515; 
+            const newY = Math.random() * 720; 
             setPosition({ x: newX, y: newY });
 
             // Add random pause between movements (0.5 to 2 seconds)
@@ -63,12 +63,13 @@ const Animal = ({ id, name, animal, color, size }) => {
         width: size,
         height: size,
         borderRadius: "50%",
+        border: "5px solid black",
         backgroundColor: color,
         marginRight: "10px",
         position: "absolute",
         left: `${position.x}px`,
         top: `${position.y}px`,
-        transition: "left 5s, top 5s", 
+        transition: "left 10s, top 10s", 
     };
 
     if(color == 'rgba(0, 0, 0, 0.500)'){
@@ -88,7 +89,6 @@ const Animal = ({ id, name, animal, color, size }) => {
         default:
             size = '???';
     }
-    
 
     return (
         <div className="Animal" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={animalStyle}>
