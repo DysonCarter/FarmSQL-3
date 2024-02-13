@@ -7,6 +7,19 @@ const Animal = ({ id, name, animal, color }) => {
         y: Math.random() * 724, 
     });
 
+    if(id == null){
+        id = '???';
+    }
+    if(name == null){
+        name = '???';
+    }
+    if(animal == null){
+        animal = '???';
+    }
+    if(color == null){
+        color = 'rgba(0, 0, 0, 0.500)';
+    }
+
     useEffect(() => {
         const moveInterval = setInterval(() => {
             const newX = Math.random() * 525; 
@@ -42,6 +55,10 @@ const Animal = ({ id, name, animal, color }) => {
         top: `${position.y}px`,
         transition: "left 5s, top 5s", 
     };
+
+    if(color == 'rgba(0, 0, 0, 0.500)'){
+        color = '???';
+    }
 
     return (
         <div className="Animal" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={animalStyle}>
