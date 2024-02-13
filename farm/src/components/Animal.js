@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Animal = ({ id, name, animal, color }) => {
+const Animal = ({ id, name, animal, color, size }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [position, setPosition] = useState({
         x: Math.random() * 525, 
@@ -20,6 +20,21 @@ const Animal = ({ id, name, animal, color }) => {
         color = 'rgba(0, 0, 0, 0.500)';
     }
 
+    switch (size) {
+        case 'small':
+            size = '40px';
+            break;
+        case 'medium':
+            size = '50px';
+            break;
+        case 'large':
+            size = '60px';
+            break;
+        default:
+            size = '50px';
+    }
+    
+    
     useEffect(() => {
         const moveInterval = setInterval(() => {
             const newX = Math.random() * 525; 
@@ -45,8 +60,8 @@ const Animal = ({ id, name, animal, color }) => {
     };
 
     const animalStyle = {
-        width: "50px",
-        height: "50px",
+        width: size,
+        height: size,
         borderRadius: "50%",
         backgroundColor: color,
         marginRight: "10px",
@@ -60,6 +75,21 @@ const Animal = ({ id, name, animal, color }) => {
         color = '???';
     }
 
+    switch (size) {
+        case '40px':
+            size = 'small';
+            break;
+        case '50px':
+            size = 'medium';
+            break;
+        case '60px':
+            size = 'large';
+            break;
+        default:
+            size = '???';
+    }
+    
+
     return (
         <div className="Animal" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={animalStyle}>
             {isHovered && (
@@ -68,6 +98,7 @@ const Animal = ({ id, name, animal, color }) => {
                     <p>Name: {name}</p>
                     <p>Species: {animal}</p>
                     <p>Color: {color}</p>
+                    <p>Size: {size}</p>
                 </div>
             )}
         </div>

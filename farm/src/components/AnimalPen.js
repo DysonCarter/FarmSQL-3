@@ -14,6 +14,7 @@ const AnimalPen = ({ animals }) => {
                     name={animal.name}
                     animal={animal.animal}
                     color={animal.color}
+                    size={animal.size}
                 />
             ))}
         </div>
