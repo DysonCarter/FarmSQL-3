@@ -31,7 +31,7 @@ const Animal = ({ id, name, animal, color, size }) => {
             size = '60px';
             break;
         default:
-            size = '50px';
+            size = '51px';
     }
     
     
