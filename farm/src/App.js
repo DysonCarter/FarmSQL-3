@@ -11,7 +11,6 @@ const App = () => {
     <div>
       <SqlTextBox />
       <div className='EmptyPen' />
-      <Farmer />
     </div>
   );
 };
