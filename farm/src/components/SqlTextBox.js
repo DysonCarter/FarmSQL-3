@@ -1,5 +1,3 @@
-// src/components/SqlTextBox.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import QueryResult from './QueryResult';
@@ -7,8 +5,8 @@ import AnimalPen from './AnimalPen';
 
 const SqlTextBox = () => {
   const [sqlQuery, setSqlQuery] = useState('');
+  const [storedQuery, setStoredQuery] = useState('');
   const [queryResult, setQueryResult] = useState(null);
-  const [error, setError] = useState(null);
 
   const handleSqlQueryChange = (event) => {
     setSqlQuery(event.target.value);
@@ -18,11 +16,19 @@ const SqlTextBox = () => {
     try {
       const response = await axios.post('http://localhost:3001/executeSqlQuery', { sqlQuery });
       setQueryResult(response.data);
-      setError(null);
+      setStoredQuery(sqlQuery); // Update storedQuery with the current sqlQuery
     } catch (error) {
-      setError(error.message);
+      console.error('Error executing SQL query:', error);
       setQueryResult(null);
     }
+  };
+
+  const isSelectQuery = (query) => {
+    return query.trim().toUpperCase().startsWith('SELECT');
+  };
+
+  const handleButtonClick = () => {
+    executeSqlQuery();
   };
 
   return (
@@ -35,13 +41,12 @@ const SqlTextBox = () => {
         onChange={handleSqlQueryChange}
       />
       <br/>
-      <button onClick={executeSqlQuery} className='SQLButton'>Run The Code</button>
-      {error && <p>Error: {error}</p>}
-      {queryResult && (
-        <QueryResult queryResult={queryResult}/>
-      )}
-      {queryResult && (
-        <AnimalPen animals={queryResult} />
+      <button onClick={handleButtonClick} className='SQLButton'>Run The Code</button>
+      {isSelectQuery(storedQuery) && queryResult && (
+        <>
+          <QueryResult queryResult={queryResult}/>
+          <AnimalPen animals={queryResult} />
+        </>
       )}
     </div>
   );
