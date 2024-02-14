@@ -86,7 +86,8 @@
 .animalData {
   width: 150px;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.250);
+  background-color: rgba(0, 0, 0, 0.450);
+  text-shadow: 5px 5px 10px black;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: fixed;
