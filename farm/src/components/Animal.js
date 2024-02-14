@@ -41,8 +41,7 @@ const Animal = ({ id, name, animal, color, size }) => {
             const newY = Math.random() * 720; 
             setPosition({ x: newX, y: newY });
 
-            // Add random pause between movements (0.5 to 2 seconds)
-            const pauseDuration = Math.random() * 15000 + 500; // Random duration between 0.5 and 2 seconds
+            const pauseDuration = Math.random() * 15000 + 100;
             setTimeout(() => {
                 setPosition(prevPosition => prevPosition);
             }, pauseDuration);
