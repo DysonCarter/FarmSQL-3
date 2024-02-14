@@ -69,7 +69,7 @@
   height: 774px;
   top: 0;
   margin-left: 513px;
-  border: 4px solid #6a4d38;
+  border: 6px solid #6a4d38;
 }
 
 .EmptyPen {
@@ -79,7 +79,7 @@
   height: 774px;
   top: 0;
   margin-left: 513px;
-  border: 4px solid #6a4d38;
+  border: 6px solid #6a4d38;
   z-index: -1;
 }
 
