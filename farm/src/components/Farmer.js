@@ -1,9 +1,12 @@
 import React from 'react';
-import farmerImage from './farmer.png';
 
 const Farmer = () => {
   return (
-      <img src={farmerImage} alt="Farmer" className="farmer"/>
+      <div className="farmer">
+        <div className='leftEye'/>
+        <div className='rightEye'/>
+        <div className='mouth'/>
+      </div>
   );
 };
 

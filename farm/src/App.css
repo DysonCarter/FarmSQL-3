@@ -63,11 +63,48 @@ body {
 
 .farmer {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 350px;
-  height: 450px;
+  bottom: 20px;
+  left: 1130px;
+  width: 310px;
+  height: 380px;
   z-index: 1000;
+  background-color: white;
+  border-radius: 55%;
+  border: 6px solid black;
+}
+
+.leftEye,
+.rightEye,
+.mouth {
+  position: absolute;
+  background-color: black;
+}
+
+.leftEye,
+.rightEye {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.leftEye {
+  top: 40%;
+  left: 40%;
+}
+
+.rightEye {
+  top: 40%;
+  right: 40%;
+}
+
+.mouth {
+  position: absolute;
+  top: 60%;
+  left: 36%;
+  width: 80px;
+  height: 40px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .AnimalPen {
