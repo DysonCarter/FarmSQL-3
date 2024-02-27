@@ -91,7 +91,7 @@ body {
   left: 1130px;
   width: 310px;
   height: 380px;
-  z-index: 1000;
+  z-index: 0;
   background-color: white;
   border-radius: 55%;
   border: 6px solid black;
@@ -163,7 +163,7 @@ body {
   margin-left: 50px;
   margin-bottom: 25px;
   padding-left: 15px;
-  z-index: 1000;
+  z-index: 999999999999999999999;
   border: 5px;
   border-radius: 15px;
 }
