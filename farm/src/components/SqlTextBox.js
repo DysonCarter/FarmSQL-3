@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import QueryResult from './QueryResult';
 import AnimalPen from './AnimalPen';
+import ResetButton from './ResetButton';
 
 const SqlTextBox = () => {
   const [sqlQuery, setSqlQuery] = useState('');
@@ -42,6 +43,7 @@ const SqlTextBox = () => {
       />
       <br/>
       <button onClick={handleButtonClick} className='SQLButton'>Run The Code</button>
+      <ResetButton/>
       {isSelectQuery(storedQuery) && queryResult && (
         <>
           <QueryResult queryResult={queryResult}/>

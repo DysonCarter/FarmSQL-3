@@ -13,7 +13,7 @@ body {
 }
 
 .SQLButton {
-  width: 507px;
+  width: 407px;
   height: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 900;
@@ -28,6 +28,27 @@ body {
 
 .SQLButton:hover {
   background-color:rgb(42, 129, 35);
+  cursor: pointer;
+}
+
+.ResetButton {
+  width: 95px;
+  height: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 0px black;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 398px;
+  left: 420px;
+}
+
+.ResetButton:hover {
+  background-color:rgb(192, 0, 0);
   cursor: pointer;
 }
 

@@ -8,9 +8,9 @@ import Farmer from './components/Farmer';
 const App = () => {
   return (
     <div>
+      <Farmer></Farmer>
       <SqlTextBox />
       <div className='EmptyPen' />
-      <Farmer></Farmer>
     </div>
   );
 };
