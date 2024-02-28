@@ -146,6 +146,10 @@ body {
   border: 5.4px solid black;
 }
 
+.EmptyPen {
+  z-index: -10;
+}
+
 
 .animalData {
   width: 135px;

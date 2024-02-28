@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const Animal = ({ id, name, animal, color, size }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [position, setPosition] = useState({
-        x: Math.random() * 455, 
-        y: Math.random() * 640, 
+        x: Math.random() * 440, 
+        y: Math.random() * 630, 
     });
 
     if(id == null){
