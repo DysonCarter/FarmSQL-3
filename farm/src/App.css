@@ -181,7 +181,7 @@ body {
 .instruction-text {
   width: 375px;
   height: 707px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.800);
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: large;
@@ -191,4 +191,5 @@ body {
   left: 71%;
   top: -3.3px;
   z-index: -9;
+  border-radius: 20px;
 }

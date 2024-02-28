@@ -7,7 +7,7 @@ import Farmer from './components/Farmer';
 import InstructionText from './components/InstructionText';
 
 const App = () => {
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(0);
 
   const handleLevelChange = () => {
     // Increment the level when called
