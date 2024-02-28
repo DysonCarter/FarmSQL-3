@@ -1,7 +1,6 @@
 /* App.css */
 body {
   background-color: rgb(96, 138, 178);
-  overflow: hidden;
 }
 
 .SQLBox {
@@ -11,6 +10,8 @@ body {
   font-size: 14.4px;
   resize: none;
   width: 450px;
+  height: 335px;
+
 }
 
 .SQLButton {
@@ -44,9 +45,9 @@ body {
   border: none;
   border-radius: 9px;
   margin-bottom: 4.5px;
-  position: absolute;
-  top: 338px;
-  left: 378px;
+  position: relative;
+  top: -50px;
+  left: 370px;
   border: 3.6px solid black;
 }
 
@@ -60,8 +61,10 @@ body {
   border: 3.6px solid black;
   overflow: auto; 
   width: 449.1px;
-  height: 288px;
+  height: 300px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  top: -50px;
 }
 
 .resultTable table {
@@ -131,30 +134,22 @@ body {
   border-bottom-right-radius: 90px;
 }
 
-.AnimalPen {
-  position: fixed;
+.AnimalPen,
+.EmptyPen {
+  position: absolute;
+  top: 50%;
+  left: 51.7%;
+  transform: translate(-50%, -50%);
   background-color: rgb(60, 186, 51);
   width: 517.5px;
   height: 696.6px;
-  top: 0;
-  margin-left: 461.7px;
   border: 5.4px solid black;
 }
 
-.EmptyPen {
-  position: fixed;
-  background-color: rgb(60, 186, 51);
-  width: 517.5px;
-  height: 696.6px;
-  top: 0;
-  margin-left: 461.7px;
-  border: 5.4px solid black;
-  z-index: -1;
-}
 
 .animalData {
   width: 135px;
-  height: 180px;
+  height: 200px;
   background-color: rgba(0, 0, 0, 0.450);
   text-shadow: 4.5px 4.5px 9px black;
   color: white;
@@ -166,4 +161,14 @@ body {
   z-index: 999999999999999999999;
   border: 4.5px;
   border-radius: 13.5px;
+}
+
+.gameContainer {
+  width: 1400px;
+  height: 700px;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

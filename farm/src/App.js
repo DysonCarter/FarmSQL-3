@@ -7,10 +7,9 @@ import Farmer from './components/Farmer';
 
 const App = () => {
   return (
-    <div>
-      <Farmer></Farmer>
+    <div className='gameContainer'>
       <SqlTextBox />
-      <div className='EmptyPen' />
+      <div className='EmptyPen'></div>
     </div>
   );
 };
