@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const Animal = ({ id, name, animal, color, size }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [position, setPosition] = useState({
-        x: Math.random() * 515, 
-        y: Math.random() * 720, 
+        x: Math.random() * 455, 
+        y: Math.random() * 640, 
     });
 
     if(id == null){
@@ -37,8 +37,8 @@ const Animal = ({ id, name, animal, color, size }) => {
     
     useEffect(() => {
         const moveInterval = setInterval(() => {
-            const newX = Math.random() * 515; 
-            const newY = Math.random() * 720; 
+            const newX = Math.random() * 455; 
+            const newY = Math.random() * 645; 
             setPosition({ x: newX, y: newY });
 
             const pauseDuration = Math.random() * 15000 + 100;
