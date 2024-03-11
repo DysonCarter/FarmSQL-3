@@ -39,7 +39,7 @@ const InstructionText = ({ level, onLevelChange }) => {
 
   return (
     <div className="instruction-text">
-      <p>{getInstructionForLevel(level)}</p>
+      <div>{getInstructionForLevel(level)}</div>
     </div>
   );
 };

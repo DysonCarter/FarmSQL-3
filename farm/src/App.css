@@ -1,6 +1,7 @@
 /* App.css */
 body {
   background-color: rgb(96, 138, 178);
+  overflow: auto;
 }
 
 .SQLBox {
@@ -180,7 +181,7 @@ body {
 
 .instruction-text {
   width: 375px;
-  height: 707px;
+  height: 687px;
   background-color: rgba(0, 0, 0, 0.800);
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -192,4 +193,5 @@ body {
   top: -3.3px;
   z-index: -9;
   border-radius: 20px;
+  padding-top: 20px;
 }
