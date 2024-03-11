@@ -33,7 +33,6 @@ const InstructionText = ({ level, onLevelChange }) => {
   };
 
   const handleButtonClick = () => {
-    // Call the onLevelChange function to move to the next level
     onLevelChange();
   };
 
