@@ -3,11 +3,13 @@ import axios from 'axios';
 import QueryResult from './QueryResult';
 import AnimalPen from './AnimalPen';
 import ResetButton from './ResetButton';
+import LevelChecker from './LevelChecker'; // Import the LevelChecker
 
-const SqlTextBox = () => {
+const SqlTextBox = ({ onLevelChange }) => {
   const [sqlQuery, setSqlQuery] = useState('');
   const [storedQuery, setStoredQuery] = useState('');
   const [queryResult, setQueryResult] = useState(null);
+  const [currentLevel, setCurrentLevel] = useState(0); // Set initial level as 0
 
   const handleSqlQueryChange = (event) => {
     setSqlQuery(event.target.value);
@@ -18,6 +20,7 @@ const SqlTextBox = () => {
       const response = await axios.post('http://localhost:3001/executeSqlQuery', { sqlQuery });
       setQueryResult(response.data);
       setStoredQuery(sqlQuery); // Update storedQuery with the current sqlQuery
+      checkLevelCompletion(response.data);
     } catch (error) {
       console.error('Error executing SQL query:', error);
       setQueryResult(null);
@@ -30,6 +33,15 @@ const SqlTextBox = () => {
 
   const handleButtonClick = () => {
     executeSqlQuery();
+  };
+
+  const checkLevelCompletion = (result) => {
+    const isMatch = LevelChecker(result, currentLevel);
+
+    if (isMatch) {
+      setCurrentLevel(currentLevel + 1);
+      onLevelChange(); // Notify parent component about level change
+    }
   };
 
   return (

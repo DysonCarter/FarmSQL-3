@@ -7,7 +7,7 @@ import Farmer from './components/Farmer';
 import InstructionText from './components/InstructionText';
 
 const App = () => {
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(0); // Start level from 0
 
   const handleLevelChange = () => {
     // Increment the level when called
@@ -16,9 +16,9 @@ const App = () => {
 
   return (
     <div className='gameContainer'>
-      <SqlTextBox />
+      <SqlTextBox onLevelChange={handleLevelChange} /> {/* Pass onLevelChange function to SqlTextBox */}
       <div className='EmptyPen'></div>
-      <Farmer/>
+      <Farmer />
       <InstructionText level={level} onLevelChange={handleLevelChange} />
     </div>
   );
