@@ -20,8 +20,8 @@ const InstructionText = ({ level, onLevelChange }) => {
       case 2:
         return (
           <div>
-            Welcome to <span style={{ color: 'green' }}>Level 2!</span><br />
-            In this level, you will learn about filtering data using the WHERE clause. Try to select records that meet specific conditions.
+            OH NO<span style={{ color: 'red' }}>!!!</span> They're all ugly<span style={{ color: 'red' }}>!!!</span> <br/><br/>
+            Pick me out the colors instead of the names.
           </div>
         );
       default:
