@@ -27,7 +27,13 @@ const InstructionText = ({ level, onLevelChange }) => {
       case 3:
         return (
           <div>
-            3
+            Well Done
+          </div>
+        );
+      case 4:
+        return (
+          <div>
+            Well Done 4
           </div>
         );
       default:
