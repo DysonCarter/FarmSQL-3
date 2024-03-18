@@ -24,6 +24,12 @@ const InstructionText = ({ level, onLevelChange }) => {
             Pick me out the colors instead of the names.
           </div>
         );
+      case 3:
+        return (
+          <div>
+            3
+          </div>
+        );
       default:
         return (
           <div>
