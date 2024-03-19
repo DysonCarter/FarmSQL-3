@@ -14,7 +14,7 @@ const InstructionText = ({ level, onLevelChange }) => {
             The keyword <span style={{ color: textGreen }}>SELECT</span> is what you use to pick out data from your database, and <span style={{ color: textGreen }}>FROM farm</span> specifies you're choosing data from the database "<span style={{ color: textGreen }}>farm</span>" <br/><br/>
             In SQL the star "<span style={{ color: textGreen }}>*</span>" represents all attributes,<br/><br/>
             You can also pick specific attributes. Show me all of the names in my farm, and <span style={{ color: 'red' }}>ONLY</span> the names! <br/><br/>
-            <span style={{ color: "rgb(50,50,50)"}}>SELECT (Which Attribute?) FROM farm</span>
+            <span style={{ color: textGreen}}>SELECT (Which Attribute?) FROM farm</span>
           </div>
         );
       case 2:
@@ -41,12 +41,22 @@ const InstructionText = ({ level, onLevelChange }) => {
             <span style={{ color: 'red' }}>Try it out</span>: Show me all the attributes of the Brown animals.
           </div>
         );
-      case 5:
-        return (
-          <div>
-            Well Done 5
-          </div>
-        );
+        case 5:
+          return (
+            <div>
+              <span style={{ color: textGreen }}>Impressive!</span> Let's explore more advanced filtering.<br/><br/>
+              Besides the <span style={{ color: textGreen }}>WHERE</span> clause, you can use logical operators like <span style={{ color: textGreen }}>AND</span>, <span style={{ color: textGreen }}>OR</span>, and <span style={{ color: textGreen }}>NOT</span> to refine your queries further. For example, to select all brown animals that are not pigs, you can use:<br/><br/>
+              <span style={{ color: textGreen }}>SELECT * FROM farm WHERE color = "Brown" AND NOT animal = "Pig"</span><br/><br/>
+              Give it a try by selecting all white animals that are either chickens or cows. (You might need parentheses)
+            </div>
+          );
+        case 6:
+          return (
+            <div>
+              <span style={{ color: textGreen }}>Epic!</span> One last test for this part: <br/><br/><br/>
+              <span style={{ color: "red" }}>Let me see the ids, names, and sizes of all the sheep and all the pink pigs. </span>
+            </div>
+          );
       default:
         return (
           <div>
@@ -57,10 +67,6 @@ const InstructionText = ({ level, onLevelChange }) => {
           </div>
         );
     }
-  };
-
-  const handleButtonClick = () => {
-    onLevelChange();
   };
 
   return (
