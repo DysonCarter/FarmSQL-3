@@ -27,7 +27,9 @@ const InstructionText = ({ level, onLevelChange }) => {
       case 3:
         return (
           <div>
-            Well Done
+            <span style={{ color: textGreen }}>Well Done!</span> You can also select multiple attributes by seperating each attribute with a comma <br/><br/>
+            Try this out, show me the color, size, and animal type (animal) of each animal in the farm <br/><br/>
+            <span style={{ color: 'red' }}>DO NOT</span> show me the id or name!
           </div>
         );
       case 4:
