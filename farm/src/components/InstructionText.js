@@ -35,7 +35,16 @@ const InstructionText = ({ level, onLevelChange }) => {
       case 4:
         return (
           <div>
-            Well Done 4
+            <span style={{ color: textGreen }}>I think you've got it!</span> That's the basics of selecting attributes, now let's narrow down our selection. <br/><br/>
+            After writing out your selection you can add a condition. Just write <span style={{ color: textGreen }}>WHERE</span> and then your condition after your query. <br/><br/>
+            If you only want the pigs from the farm you could say (QUERY)<span style={{ color: textGreen }}> WHERE animal = "Pig"</span> <br/><br/>
+            <span style={{ color: 'red' }}>Try it out</span>: Show me all the attributes of the Brown animals.
+          </div>
+        );
+      case 5:
+        return (
+          <div>
+            Well Done 5
           </div>
         );
       default:
