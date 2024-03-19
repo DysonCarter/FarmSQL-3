@@ -11,7 +11,7 @@ const InstructionText = ({ level, onLevelChange }) => {
         return (
           <div>
             <span style={{ color: textGreen }}>Well Done!</span><br/><br/>
-            The keyword <span style={{ color: textGreen }}>SELECT</span> is what you use to pick out data from your database, and <span style={{ color: textGreen }}>FROM farm</span> specificies you're choosing data from the database "<span style={{ color: textGreen }}>farm</span>" <br/><br/>
+            The keyword <span style={{ color: textGreen }}>SELECT</span> is what you use to pick out data from your database, and <span style={{ color: textGreen }}>FROM farm</span> specifies you're choosing data from the database "<span style={{ color: textGreen }}>farm</span>" <br/><br/>
             In SQL the star "<span style={{ color: textGreen }}>*</span>" represents all attributes,<br/><br/>
             You can also pick specific attributes. Show me all of the names in my farm, and <span style={{ color: 'red' }}>ONLY</span> the names! <br/><br/>
             <span style={{ color: "rgb(50,50,50)"}}>SELECT (Which Attribute?) FROM farm</span>
