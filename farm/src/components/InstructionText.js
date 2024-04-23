@@ -44,17 +44,15 @@ const InstructionText = ({ level, onLevelChange }) => {
         case 5:
           return (
             <div>
-              <span style={{ color: textGreen }}>Impressive!</span> Let's explore more advanced filtering.<br/><br/>
-              Besides the <span style={{ color: textGreen }}>WHERE</span> clause, you can use logical operators like <span style={{ color: textGreen }}>AND</span>, <span style={{ color: textGreen }}>OR</span>, and <span style={{ color: textGreen }}>NOT</span> to refine your queries further. For example, to select all brown animals that are not pigs, you can use:<br/><br/>
-              <span style={{ color: textGreen }}>SELECT * FROM farm WHERE color = "Brown" AND NOT animal = "Pig"</span><br/><br/>
-              Give it a try by selecting all white animals that are either chickens or cows. (You might need parentheses)
+              <span style={{ color: textGreen }}>Epic!</span> Thats all for today!<br/><br/><br/>
+              <span style={{ color: "red" }}></span>
             </div>
           );
         case 6:
           return (
             <div>
-              <span style={{ color: textGreen }}>Epic!</span> One last test for this part: <br/><br/><br/>
-              <span style={{ color: "red" }}>Let me see the ids, names, and sizes of all the sheep and all the pink pigs. </span>
+              <span style={{ color: textGreen }}>Epic!</span> Thats all for today!<br/><br/><br/>
+              <span style={{ color: "red" }}></span>
             </div>
           );
       default:
