@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div className='gameContainer'>
-      <SqlTextBox onLevelChange={handleLevelChange} /> {/* Pass onLevelChange function to SqlTextBox */}
+      <SqlTextBox onLevelChange={handleLevelChange} /> {}
       <div className='EmptyPen'></div>
       <Farmer />
       <InstructionText level={level} onLevelChange={handleLevelChange} />

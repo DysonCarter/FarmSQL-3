@@ -21,7 +21,7 @@ const InstructionText = ({ level, onLevelChange }) => {
         return (
           <div>
             OH NO<span style={{ color: 'red' }}>!!!</span> They're all ugly<span style={{ color: 'red' }}>!!!</span> <br/><br/>
-            Pick me out the colors instead of the names.
+            Pick me out the colors of the animals instead of the names.
           </div>
         );
       case 3:
